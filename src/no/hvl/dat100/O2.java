@@ -49,11 +49,11 @@ public class O2 {
 			throw new IllegalArgumentException(p + " er ikke i intervallet [0, 100]");
 		// Eliminerer karakterer i stigende rekkefølge
 		// @formatter:off
-	    return p <= 39 ? "F" :
+		return p <= 39 ? "F" :
 	    	   p <= 49 ? "E" :
 	    	   p <= 59 ? "D" :
 	    	   p <= 79 ? "C" :
 	    	   p <= 89 ? "B" : "A";
-	    // @formatter:on
+		// @formatter:on
 	}
 }
