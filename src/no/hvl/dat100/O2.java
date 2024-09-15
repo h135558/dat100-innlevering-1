@@ -53,7 +53,8 @@ public class O2 {
 			   p <= 49 ? "E" :
 			   p <= 59 ? "D" :
 			   p <= 79 ? "C" :
-			   p <= 89 ? "B" : "A";
+			   p <= 89 ? "B" :
+			   "A";
 		// @formatter:on
 	}
 }
