@@ -8,9 +8,9 @@ public class O2 {
 		for (int i = 1; i < 11; i++) {
 			System.out.print("Skriv inn poengsum #" + i + ": ");
 			int tall = Integer.parseInt(scanner.next());
-			String karakter = karakter(tall);
+			char karakter = karakter(tall);
 
-			if (karakter == "X") {
+			if (karakter == 'X') {
 				System.out.println(tall + " er ikke i intervallet [0, 100]");
 				i--;
 			}
@@ -22,16 +22,16 @@ public class O2 {
 		scanner.close();
 	}
 
-	public static String karakter(int p) {
+	public static char karakter(int p) {
 		// @formatter:off
-		return p < 0 ? "X":
-			   p <= 39 ? "F" :
-			   p <= 49 ? "E" :
-			   p <= 59 ? "D" :
-			   p <= 79 ? "C" :
-			   p <= 89 ? "B" :
-			   p <= 100 ? "A":
-			   "X";
+		return p < 0 ? 'X':
+			   p <= 39 ? 'F' :
+			   p <= 49 ? 'E' :
+			   p <= 59 ? 'D' :
+			   p <= 79 ? 'C' :
+			   p <= 89 ? 'B' :
+			   p <= 100 ? 'A':
+			   'X';
 		// @formatter:on
 	}
 }
