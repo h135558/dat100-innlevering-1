@@ -3,26 +3,33 @@ package no.hvl.dat100;
 public class O3 {
 
 	public static void main(String[] args) {
-		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		int n;
+		long fakultet;
+		java.util.Scanner input = new java.util.Scanner(System.in);
 
-		System.out.print("Beregn fakultet til: ");
-
-		long n = scanner.nextLong();
-		scanner.close();
-
-		System.out.println(n + "! = " + fakultet(n));
+		do {
+			System.out.print("Beregn fakultet til: ");
+			n = input.nextInt();
+			fakultet = fakultet(n);
+			
+			if (fakultet < 1) 
+				System.out.println("Kan ikke beregne fakultet til negative tall");
+		} while (fakultet < 1);
+		
+		input.close();
+		System.out.println(n + "! = " + fakultet);
 	}
 
-	public static long fakultet(long n) {		
-		if (n == 0)
-			return 1;
-		if (n > 0)
-			for (long i = n - 1; i > 0; i--) {
-				n *= i;
-			}
-		else 
-			throw new IllegalArgumentException("Kan ikke beregne fakultet til negative tall");
+	public static long fakultet(int n) {
+		int fakultet = 1;
 		
-		return n;
+		if (n < 0)
+			return -1;
+
+		for (long i = n; i > 0; i--) {
+			fakultet *= i;
+		}
+
+		return fakultet;
 	}
 }
