@@ -3,11 +3,11 @@ package no.hvl.dat100;
 public class O2 {
 
 	public static void main(String[] args) {
-		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		java.util.Scanner input = new java.util.Scanner(System.in);
 
 		for (int i = 1; i < 11; i++) {
 			System.out.print("Skriv inn poengsum #" + i + ": ");
-			int tall = Integer.parseInt(scanner.next());
+			int tall = Integer.parseInt(input.next());
 			char karakter = karakter(tall);
 
 			if (karakter == 'X') {
@@ -19,7 +19,7 @@ public class O2 {
 				System.out.println(tall + " poeng gir karakteren: " + karakter);
 		}
 
-		scanner.close();
+		input.close();
 	}
 
 	public static char karakter(int p) {
