@@ -24,9 +24,9 @@ public class O3 {
 		int fakultet = 1;
 
 		if (n < 0)
-			return -1;
+			return 0;
 
-		for (long i = n; i > 0; i--) {
+		for (long i = 2; i <= n; i++) {
 			fakultet *= i;
 		}
 
