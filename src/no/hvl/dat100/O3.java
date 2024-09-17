@@ -11,18 +11,18 @@ public class O3 {
 			System.out.print("Beregn fakultet til: ");
 			n = input.nextInt();
 			fakultet = fakultet(n);
-			
-			if (fakultet < 1) 
+
+			if (fakultet < 1)
 				System.out.println("Kan ikke beregne fakultet til negative tall");
 		} while (fakultet < 1);
-		
+
 		input.close();
 		System.out.println(n + "! = " + fakultet);
 	}
 
 	public static long fakultet(int n) {
 		int fakultet = 1;
-		
+
 		if (n < 0)
 			return -1;
 

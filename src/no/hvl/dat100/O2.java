@@ -18,7 +18,7 @@ public class O2 {
 			else
 				System.out.println(tall + " poeng gir karakteren: " + karakter);
 		}
-		
+
 		scanner.close();
 	}
 
